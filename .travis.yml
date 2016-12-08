@@ -4,6 +4,7 @@ dist: trusty
 
 install:
   - sudo apt-get install -y qt5-default qttools5-dev-tools  #install necessary Qt files
+  - sudo apt-get install -y libcln-dev
 
 script:
  - qmake -project
