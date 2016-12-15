@@ -1,12 +1,11 @@
-# The Trusty beta Build Environment
-sudo: required
-dist: trusty
+language: cpp
 
-install:
-  - sudo apt-get install -y qt5-default qttools5-dev-tools  #install necessary Qt files
-  - sudo apt-get install -y libcln-dev
+os:
+  - osx
 
+before_install:
+  - brew install qt5 cln
+  - brew link --force qt5
 script:
- - qmake -project
- - qmake Differ.pro
+ - qmake
  - make
