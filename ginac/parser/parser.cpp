@@ -82,7 +82,7 @@ ex parser::parse_paren_expr()
 }
 
 extern numeric* _num_1_p;
-extern ex _ex0;
+extern const ex _ex0;
 
 /// unary_expr: [+-] expression
 ex parser::parse_unary_expr()

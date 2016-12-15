@@ -171,4 +171,5 @@ mac {
 }
 
 DISTFILES += \
-    ginac/parser/builtin_fcns.def
+    ginac/parser/builtin_fcns.def \
+    build.sh
