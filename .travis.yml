@@ -7,5 +7,4 @@ before_install:
   - brew install qt5 cln
   - brew link --force qt5
 script:
- - qmake
- - make
+ - build-mac.sh
