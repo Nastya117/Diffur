@@ -1,6 +1,6 @@
 #!/bin/sh
 
 qmake
-make
+make -j6
 macdeployqt Differ.app
 zip differ-mac-$1.zip Differ.app
