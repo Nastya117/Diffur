@@ -3,4 +3,4 @@
 qmake
 make -j6
 macdeployqt Differ.app
-zip differ-mac-$1.zip -r Differ.app
+tar -zcvf differ-mac-$1.tar.gz Differ.app
