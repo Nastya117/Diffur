@@ -5,12 +5,12 @@ before_install:
 - brew install qt5 cln
 - brew link --force qt5
 script:
-- "./build-mac.sh"
+- ./build-mac.sh $TRAVIS_TAG
 deploy:
   provider: releases
   api_key:
     secure: GwO+430uJa8RH+npgSN11mJq0/basdc2lLfuSo+m39U6QAnftu/bSdyto+9rrUY7ueHViNHtFTnsb9isrmz6vy9XalEc/ls5yu3/5qr8dH22b2zytHf4FWMnAuWr7rtwt/NvX6OlnPNmyOjLfwcfhGv5MFRZjrQEAMZtWCln3+QP8/dvPTkppBmqO80ci5bSReSDUCCHdzYiZuE6muPhQ0EdbXWT76pYxM8ZAoaZTD7EPJPpyJQXhNrQpNXdRQQFqcnDUmf/bchQqV5ljXmAVni3IFoMNqN23TcU6BTRg3tCkVecIiZmKqfVMkwtICN8E+spr22fGaXYZ7qaDMj9BwL2DBKufLY1LwRHvEPbyDtbgQJTtUT5Zq6UlU2nB9HAQsAEzpou07EMSMchuZ0URnjQccpJYS1w1L1HTwQOxlyGdVvo57f2opi1OYpO8rMOC8fTV7PGRL4L2HwnTNbc4EYnvbSPd3M4M/4n5P4zwiZMYnAX33UhQfHzdqVnEUhj+kbfGg/DKdIRmbRzoDbnGbx0UEfkFu4WPb26wM6oSjAHfqq0Zyug7fJPyxLJCoDNeS1zY7G9zQVorrPxaeErEqOE9zHWSZMb8sxKLIPDj0qPorZZMQmFHzd0H1V0H4U2LhIqVDXcJb3PZTL2/R/RJ2n3WXKwwJci1MgaxHAv3VM=
-  file: Differ.zip
+  file: differ-mac-$TRAVIS_TAG.zip
   skip_cleanup: true
   on:
       tags: true
